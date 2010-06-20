@@ -2,12 +2,16 @@
 
 <PropertyList>
 
-  <chase-distance-m type="double" archive="y"> -30 </chase-distance-m>
+  <chase-distance-m type="double" archive="y"> -25 </chase-distance-m>
 
-  <view n="102">
-    <name>Pilot View</name>
+  <view n="100">
+    <name>Co Pilot View</name>
+    <type>lookfrom</type>
     <internal archive="y">true</internal>
     <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
       <x-offset-m archive="y">  0.305 </x-offset-m>	<!-- Right -->
       <y-offset-m archive="y">  0.244 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -5.253 </z-offset-m>	<!-- Back  -->

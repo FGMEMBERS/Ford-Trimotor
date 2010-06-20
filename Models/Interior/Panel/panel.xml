@@ -22,6 +22,19 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- nav light -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m> -0.450 </y-m>
+      <z-m>  0.010 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- attitude -->
   <model>
     <path>Aircraft/Ford-Trimotor/Models/Interior/Panel/Instruments/ai/ai.xml</path>

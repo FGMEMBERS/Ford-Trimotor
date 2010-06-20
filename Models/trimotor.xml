@@ -867,8 +867,8 @@
     <object-name>Taxi-LightR</object-name>
     <condition>
       <equals>
-        <property>instrumentation/doors/crew/position-norm</property>
-        <value> 0 </value>
+        <property>controls/switches/landing-light</property>
+        <value> 1 </value>
       </equals>
     </condition>
   </animation>
