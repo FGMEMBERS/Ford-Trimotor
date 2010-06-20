@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <startup>
+      <splash-texture>Aircraft/Ford-Trimotor/trimotor-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path archive="y">Aircraft/Ford-Trimotor/Models/trimotor.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <sound>
+      <path archive="y">Aircraft/Ford-Trimotor/Sounds/trimotor-sound.xml</path>
+    </sound>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Ford 4.AT Trimotor</title>
+    </help>
+
+    <menubar include="Dialogs/trimotor-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/trimotor-keyboard.xml">
+    </keyboard>
+  </input>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+       <level-gal_us>200</level-gal_us>
+      </tank>
+      <tank n="1">
+        <level-gal_us>200</level-gal_us> 
+      </tank>
+      <tank n="2">
+        <level-gal_us>200</level-gal_us> 
+      </tank>
+    </fuel>
+  </consumables>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <engines>
+    <engine>
+      <rpm type="double">10</rpm>
+    </engine>
+    <engine>
+      <rpm type="double">10</rpm>
+    </engine>
+    <engine>
+      <rpm type="double">10</rpm>
+    </engine>
+  </engines>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Ford-Trimotor/Nasal/doors.nas</file>
+    </doors>
+    <trimotor>
+      <file>Aircraft/Ford-Trimotor/Nasal/liveries.nas</file>
+      <file>Aircraft/Ford-Trimotor/Nasal/light.nas</file>
+    </trimotor>
+  </nasal>
+
+</PropertyList>
