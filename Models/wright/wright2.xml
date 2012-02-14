@@ -30,7 +30,7 @@
   </model>
 
   <model>
-    <name>Bloc3</name>
+    <name>Bloc3</name>7
     <path>Aircraft/Ford-Trimotor/Models/wright/blocpiston.xml</path>
     <offsets>
       <roll-deg> 80 </roll-deg>
@@ -86,7 +86,7 @@
   </model>
 
   <animation>
-    <name>Complex</name>
+    <name>HighPoly</name>
     <object-name>centre</object-name>
     <object-name>axe1</object-name>
     <object-name>axe2</object-name>
@@ -105,6 +105,7 @@
 
   <animation>
     <name>LowPoly</name>
+    <object-name>moteur</object-name>
     <object-name>centre</object-name>
     <object-name>axe1</object-name>
     <object-name>axe2</object-name>
@@ -118,16 +119,15 @@
 
   <animation>
     <type>range</type>
-    <object-name>Complex</object-name>
-    <min-m>0</min-m>
-    <max-property>/sim/rendering/static-lod/detailed</max-property>
+    <object-name>LowPoly</object-name>
+    <min-property>sim/rendering/static-lod/detailed</min-property>
   </animation>
 
   <animation>
     <type>range</type>
-    <object-name>LowPoly</object-name>
-    <min-property>/sim/rendering/static-lod/detailed</min-property>
-    <max-property>/sim/rendering/static-lod/bare</max-property>
+    <object-name>HighPoly</object-name>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/detailed</max-property>
   </animation>
 
 </PropertyList>
