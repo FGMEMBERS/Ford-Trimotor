@@ -8,6 +8,13 @@
     <description>Ford 4.AT Trimotor</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
 
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 2 </systems>
+      <cockpit type="int"> 2 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>
