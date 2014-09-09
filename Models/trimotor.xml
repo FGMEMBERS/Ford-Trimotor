@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>trimotor.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Ford-Trimotor/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
+    </unload>
+  </nasal>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fuselage</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>structure</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeD1</object-name>
+    <object-name>axeD2</object-name>
+    <object-name>direction</object-name>
+    <object-name>rudderL</object-name>
+    <object-name>rudderR</object-name>
+    <object-name>elevators</object-name>
+    <object-name>pito</object-name>
+
+    <object-name>trous</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
+    <object-name>echappes</object-name>
+    <object-name>axeA1</object-name>
+    <object-name>axeA2</object-name>
+    <object-name>axeA3</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitres</object-name>
+    <object-name>cableelevator1</object-name>
+    <object-name>cableelevator2</object-name>
+    <object-name>cableelevator3</object-name>
+    <object-name>cableelevator4</object-name>
+    <object-name>cablerudderL</object-name>
+    <object-name>cablerudderR</object-name>
+    <object-name>cablerudderL2</object-name>
+    <object-name>cablerudderR2</object-name>
+    <object-name>cableaileronLH</object-name>
+    <object-name>cableaileronLB</object-name>
+    <object-name>cableaileronRH</object-name>
+    <object-name>cableaileronRB</object-name>
+    <object-name>cableroueAL</object-name>
+    <object-name>cableroueAR</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>structure</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeD1</object-name>
+    <object-name>axeD2</object-name>
+    <object-name>direction</object-name>
+    <object-name>rudderL</object-name>
+    <object-name>rudderR</object-name>
+    <object-name>elevators</object-name>
+    <object-name>pito</object-name>
+
+    <object-name>trous</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
+    <object-name>echappes</object-name>
+    <object-name>axeA1</object-name>
+    <object-name>axeA2</object-name>
+    <object-name>axeA3</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>structure</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeD1</object-name>
+    <object-name>axeD2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>rudderL</object-name>
+    <object-name>rudderR</object-name>
+    <object-name>elevators</object-name>
+    <object-name>pito</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+    <object-name>cableelevator1</object-name>
+    <object-name>cableelevator2</object-name>
+    <object-name>cableelevator3</object-name>
+    <object-name>cableelevator4</object-name>
+    <object-name>cablerudderL</object-name>
+    <object-name>cablerudderR</object-name>
+    <object-name>cablerudderL2</object-name>
+    <object-name>cablerudderR2</object-name>
+    <object-name>cableaileronLH</object-name>
+    <object-name>cableaileronLB</object-name>
+    <object-name>cableaileronRH</object-name>
+    <object-name>cableaileronRB</object-name>
+    <object-name>cableroueAL</object-name>
+    <object-name>cableroueAR</object-name>
+  </animation>
+
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.109 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cranking -->
+  <!-- Left -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/cranking/crankingL.xml</path>
+    <offsets> 
+      <x-m> -3.447 </x-m>
+      <y-m> -3.136 </y-m>
+      <z-m> -0.983 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/cranking/crankingL.xml</path>
+    <offsets> 
+      <x-m> -3.447 </x-m>
+      <y-m> -2.765 </y-m>
+      <z-m> -0.983 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Center -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/cranking/crankingC.xml</path>
+    <offsets> 
+      <x-m> -5.917 </x-m>
+      <y-m> -0.020 </y-m>
+      <z-m> -1.217 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/cranking/crankingC.xml</path>
+    <offsets> 
+      <x-m> -5.917 </x-m>
+      <y-m>  0.020 </y-m>
+      <z-m> -1.217 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/cranking/crankingR.xml</path>
+    <offsets> 
+      <x-m> -3.447 </x-m>
+      <y-m>  2.765 </y-m>
+      <z-m> -0.983 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/cranking/crankingR.xml</path>
+    <offsets> 
+      <x-m> -3.447 </x-m>
+      <y-m>  3.136 </y-m>
+      <z-m> -0.983 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -3.812 </x-m>
+      <y-m> -2.808 </y-m>
+      <z-m> -2.671 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue de droite -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/ground/ground1.xml</path>   
+    <offsets>
+      <x-m> -3.812 </x-m>
+      <y-m>  2.808 </y-m>
+      <z-m> -2.671 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue de queue -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m>  7.112 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.206 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- Moteur gauche -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/wright/wright0.xml</path>
+    <offsets>
+      <x-m> -4.355 </x-m>
+      <y-m> -2.950 </y-m>
+      <z-m> -0.580 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur droit -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/wright/wright1.xml</path>
+    <offsets>
+      <x-m> -4.355 </x-m>
+      <y-m>  2.950 </y-m>
+      <z-m> -0.580 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur avant -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/wright/wright2.xml</path>
+    <offsets>
+      <x-m> -7.155 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.530 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <name>RudderSystem</name>
+    <object-name>direction</object-name>
+    <object-name>cablerudderL2</object-name>
+    <object-name>cablerudderR2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RudderSystem</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <axis>
+      <x1-m> 6.661 </x1-m>
+      <y1-m> 0.000 </y1-m>
+      <z1-m> 1.976 </z1-m>
+      <x2-m> 6.701 </x2-m>
+      <y2-m> 0.000 </y2-m>
+      <z2-m> 0.914 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablerudderL2</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m>  6.652 </x-m>
+     <y-m> -0.186 </y-m>
+     <z-m>  0.969 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablerudderR2</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> 6.652 </x-m>
+     <y-m> 0.186 </y-m>
+     <z-m> 0.969 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>RudderSystemL</name>
+    <object-name>rudderL</object-name>
+    <object-name>cablerudderL</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RudderSystemL</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -6.126 </x-m>
+     <y-m> -0.630 </y-m>
+     <z-m> -0.483 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablerudderL</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -6.076 </x-m>
+     <y-m> -0.654 </y-m>
+     <z-m> -0.679 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>RudderSystemR</name>
+    <object-name>rudderR</object-name>
+    <object-name>cablerudderR</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RudderSystemR</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -6.126 </x-m>
+     <y-m>  0.630 </y-m>
+     <z-m> -0.483 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablerudderR</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -6.076 </x-m>
+     <y-m>  0.654 </y-m>
+     <z-m> -0.679 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <name>ElevatorSystem0</name>
+    <object-name>profondeur</object-name>
+    <object-name>cableelevator3</object-name>
+    <object-name>cableelevator4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ElevatorSystem0</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> 6.666 </x-m>
+     <y-m> 0.000 </y-m>
+     <z-m> 0.850 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableelevator3</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> 6.619 </x-m>
+     <y-m> 0.000 </y-m>
+     <z-m> 1.037 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableelevator4</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> 6.619 </x-m>
+     <y-m> 0.000 </y-m>
+     <z-m> 0.664 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>ElevatorSystem1</name>
+    <object-name>elevators</object-name>
+    <object-name>cableelevator1</object-name>
+    <object-name>cableelevator2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ElevatorSystem1</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -5.618 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m> -0.652 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableelevator1</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -5.549 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m> -0.900 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableelevator2</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+     <x-m> -5.685 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m> -0.396 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Animations des ailerons -->
+  <animation>
+    <name>AileronSystemG</name>
+    <object-name>aileronG</object-name>
+    <object-name>cableaileronLH</object-name>
+    <object-name>cableaileronLB</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronSystemG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 20 </factor>
+    <axis>
+      <x1-m>  -2.014 </x1-m>
+      <y1-m> -10.821 </y1-m>
+      <z1-m>   0.755 </z1-m>
+      <x2-m>  -1.131 </x2-m>
+      <y2-m>  -6.488 </y2-m>
+      <z2-m>   0.535 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableaileronLH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+     <x-m> -1.739 </x-m>
+     <y-m> -8.470 </y-m>
+     <z-m>  0.882 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableaileronLB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+     <x-m> -1.739 </x-m>
+     <y-m> -8.470 </y-m>
+     <z-m>  0.408 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>AileronSystemD</name>
+    <object-name>aileronD</object-name>
+    <object-name>cableaileronRH</object-name>
+    <object-name>cableaileronRB</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronSystemD</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 20 </factor>
+    <axis>
+      <x1-m> -1.131 </x1-m>
+      <y1-m>  6.488 </y1-m>
+      <z1-m>  0.535 </z1-m>
+      <x2-m> -2.014 </x2-m>
+      <y2-m> 10.821 </y2-m>
+      <z2-m>  0.755 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableaileronRH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+     <x-m> -1.739 </x-m>
+     <y-m>  8.470 </y-m>
+     <z-m>  0.882 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableaileronRB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+     <x-m> -1.739 </x-m>
+     <y-m>  8.470 </y-m>
+     <z-m>  0.408 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+    <name>TrainGauche</name>
+    <object-name>roueG</object-name>
+    <object-name>axeG1</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>TrainGauche</object-name>
+    <property>/gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -0.1 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.3 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>axeG2</object-name>
+    <property>/gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  1 </dep></entry>
+      <entry><ind> 1 </ind><dep> -8 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.076 </x-m>
+      <y-m> -0.699 </y-m>
+      <z-m> -1.328 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>TrainDroit</name>
+    <object-name>roueD</object-name>
+    <object-name>axeD1</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>TrainDroit</object-name>
+    <property>/gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -0.1 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.3 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>axeD2</object-name>
+    <property>/gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -1 </dep></entry>
+      <entry><ind> 1 </ind><dep>  8 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.076 </x-m>
+      <y-m>  0.699 </y-m>
+      <z-m> -1.328 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation de la roulette de queue en fonction de la gouverne de direction -->
+  <animation>
+    <name>RouletteDeQueue</name>
+    <object-name>axeA1</object-name>
+    <object-name>axeA2</object-name>
+    <object-name>axeA3</object-name>
+    <object-name>roueA</object-name>
+    <object-name>cableroueAL</object-name>
+    <object-name>cableroueAR</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RouletteDeQueue</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -20 </factor>
+    <axis>
+      <x1-m> 6.762 </x1-m>
+      <y1-m> 0.000 </y1-m>
+      <z1-m> 0.113 </z1-m>
+      <x2-m> 6.600 </x2-m>
+      <y2-m> 0.000 </y2-m>
+      <z2-m> 0.537 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableroueAL</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <axis>
+      <x1-m>  6.947 </x1-m>
+      <y1-m> -0.205 </y1-m>
+      <z1-m> -0.121 </z1-m>
+      <x2-m>  6.786 </x2-m>
+      <y2-m> -0.205 </y2-m>
+      <z2-m>  0.302 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableroueAR</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <axis>
+      <x1-m>  6.947 </x1-m>
+      <y1-m>  0.205 </y1-m>
+      <z1-m> -0.121 </z1-m>
+      <x2-m>  6.786 </x2-m>
+      <y2-m>  0.205 </y2-m>
+      <z2-m>  0.302 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>roueG</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.812 </x-m>
+      <y-m> -2.808 </y-m>
+      <z-m> -2.204 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueD</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.812 </x-m>
+      <y-m>  2.808 </y-m>
+      <z-m> -2.204 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueA</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> 7.112 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.043 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Effets lumineux -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 6.125 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 2.035 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> -1.899 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.421 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  -2.950 </x-m>
+      <y-m> -11.831 </y-m>
+      <z-m>   0.823 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -2.950 </x-m>
+      <y-m> 11.831 </y-m>
+      <z-m>  0.823 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m>  -2.940 </x-m>
+      <y-m> -11.831 </y-m>
+      <z-m>   0.823 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -2.940 </x-m>
+      <y-m> 11.831 </y-m>
+      <z-m>  0.823 </z-m>
+   </offsets>
+  </model>
+
+  <!-- Wing light cone right -->
+  <model>
+    <name>Taxi-LightL</name>
+    <path>Aircraft/Ford-Trimotor/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>          -4.317 </x-m>
+      <y-m>          -5.791 </y-m>
+      <z-m>           0.578 </z-m>
+      <pitch-deg>    -9.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Taxi-LightR</name>
+    <path>Aircraft/Ford-Trimotor/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>          -4.317 </x-m>
+      <y-m>           5.791 </y-m>
+      <z-m>           0.578 </z-m>
+      <pitch-deg>    -9.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Taxi-LightL</object-name>
+    <object-name>Taxi-LightR</object-name>
+    <condition>
+      <equals>
+        <property>controls/switches/landing-light</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>
+
