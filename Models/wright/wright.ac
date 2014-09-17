@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
 kids 6
 OBJECT poly
@@ -8,8 +8,8 @@ loc 0 0 -0
 data 6
 anneau
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 768
 -0.072275 0 -0.243845
 -0.067831 0 -0.242961
@@ -6163,8 +6163,8 @@ loc 0 0 -0
 data 4
 axe1
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 129
 -0.279841 0.011194 -0.056278
 -0.279841 0.021959 -0.053013
@@ -7167,8 +7167,8 @@ loc 0.044974 0 -0
 data 4
 axe2
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 96
 -0.324815 0 -0.057381
 -0.324815 -0.011194 -0.056278
@@ -7722,8 +7722,8 @@ loc 0 0 -0
 data 5
 cache
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 806
 0.059902 -0.308876 -0.144875
 -0.047049 -0.297246 -0.138917
@@ -13450,8 +13450,8 @@ loc 0 0 -0
 data 6
 centre
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 865
 -0.265765 0.012508 -0.06288
 -0.258427 0.016489 -0.082895
@@ -20342,8 +20342,8 @@ loc 0 0 -0
 data 6
 moteur
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 11800
 0.04155 -0.349124 -0.418511
 0.04877 -0.344656 -0.419349
