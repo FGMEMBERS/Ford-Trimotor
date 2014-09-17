@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
- 
-<PropertyList>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
+<PropertyList>
+  
   <fx>
- 
+    
     <!-- Engine 1 -->
     <crank>
       <name>engstart1</name>
@@ -15,7 +15,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>crank1</name>
       <mode>looped</mode>
@@ -32,7 +32,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>cough1</name>
       <path>Sounds/coughing.wav</path>
@@ -43,7 +43,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine1_idle</name>
       <mode>looped</mode>
@@ -61,7 +61,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>engine1_running</name>
       <mode>looped</mode>
@@ -87,7 +87,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <!-- Engine 2 -->
     <crank>
       <name>engstart2</name>
@@ -99,7 +99,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>crank2</name>
       <mode>looped</mode>
@@ -116,7 +116,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>cough2</name>
       <path>Sounds/coughing.wav</path>
@@ -127,7 +127,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine2_idle</name>
       <mode>looped</mode>
@@ -145,7 +145,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>engine2_running</name>
       <mode>looped</mode>
@@ -171,7 +171,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <!-- Engine 3 -->
     <crank>
       <name>engstart3</name>
@@ -183,7 +183,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>crank3</name>
       <mode>looped</mode>
@@ -200,7 +200,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>cough3</name>
       <path>Sounds/coughing.wav</path>
@@ -211,7 +211,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine3_idle</name>
       <mode>looped</mode>
@@ -229,7 +229,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>engine3_running</name>
       <mode>looped</mode>
@@ -255,7 +255,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -275,7 +275,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -307,7 +307,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
- 
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -334,7 +334,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
-
+    
   </fx>
- 
+  
 </PropertyList>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Ford Trimotor : 2012 Emmanuel BARANGER
                      with Melchior's script
@@ -14,7 +14,7 @@
      Cruise speed  :  78 kts     ( 145 km/h )
 -->
 
-<airplane mass="7840">
+<airplane mass="7840" version="YASIM_VERSION_CURRENT">
 
   <approach speed="55" aoa="3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
@@ -205,11 +205,11 @@
   </gear>
 
   <!-- Fuel -->
-  <tank x="1.9" y=" 2.7" z="0.596" capacity="201"/>
-  <tank x="1.9" y="-2.7" z="0.596" capacity="201"/>
+  <tank x="1.9" y=" 2.7" z="0.596" capacity="562"/>
+  <tank x="1.9" y=" 0.0" z="0.596" capacity="562"/>
+  <tank x="1.9" y="-2.7" z="0.596" capacity="562"/> 
 
   <!-- Mass placement -->
   <ballast x="0" y="0" z="-2" mass="2500"/>
 
 </airplane>
-

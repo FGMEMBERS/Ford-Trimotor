@@ -1,29 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
- <path>rpm.ac</path>
-
+  
+  <path>rpm.ac</path>
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>face</object-name>
     <object-name>needle</object-name>
-
+    
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
+  
+  <effect>
+    <inherits-from>Aircraft/Ford-Trimotor/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -35,7 +28,7 @@
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
@@ -43,8 +36,8 @@
     <min>    0 </min>
     <max> 3500 </max>
     <interpolation>
-     <entry><ind>    0 </ind><dep>   0 </dep></entry>
-     <entry><ind> 3500 </ind><dep> 263 </dep></entry>
+      <entry><ind>    0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 3500 </ind><dep> 263 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -52,7 +45,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>
-
-
