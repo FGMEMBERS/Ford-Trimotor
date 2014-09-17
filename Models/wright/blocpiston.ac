@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
 kids 7
 OBJECT poly
@@ -8,8 +8,8 @@ loc 0 0 -0
 data 7
 bougies
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 1158
 -0.067647 -0.431244 0.00032
 -0.067647 -0.422696 0.006031
@@ -8787,8 +8787,8 @@ loc 0 0 -0
 data 6
 caches
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 640
 -0.079044 -0.538146 -0.114239
 -0.078788 -0.536088 -0.115033
@@ -14162,8 +14162,8 @@ loc 0 0 -0
 data 5
 cames
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 950
 -0.107245 -0.242033 -0.036299
 -0.108173 -0.241805 -0.037996
@@ -20857,8 +20857,8 @@ loc 0 0 -0
 data 9
 cylindres
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 1153
 -0.049992 -0.429959 0.00032
 -0.048644 -0.429959 -0.012421
@@ -26245,8 +26245,8 @@ loc 0 0 -0
 data 6
 ecrous
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 1128
 -0.064601 -0.525273 0.067333
 -0.070086 -0.516026 0.063556
@@ -34816,8 +34816,8 @@ loc 0 0 -0
 data 7
 pistons
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 4766
 -0.057244 -0.212639 0.014659
 -0.052755 -0.212639 0.028441
@@ -70773,8 +70773,8 @@ loc 0 0 -0
 data 8
 souflets
 texture "wright.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 1984
 -0.107245 -0.242033 0.036298
 -0.108173 -0.241805 0.037996

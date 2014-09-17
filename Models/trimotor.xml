@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -55,9 +55,6 @@
     <object-name>axeA1</object-name>
     <object-name>axeA2</object-name>
     <object-name>axeA3</object-name>
-
-    <!-- Objets transparents -->
-    <object-name>vitres</object-name>
     <object-name>cableelevator1</object-name>
     <object-name>cableelevator2</object-name>
     <object-name>cableelevator3</object-name>
@@ -72,6 +69,9 @@
     <object-name>cableaileronRB</object-name>
     <object-name>cableroueAL</object-name>
     <object-name>cableroueAR</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>vitres</object-name>
   </animation>
 
   <animation>
@@ -102,39 +102,29 @@
     <object-name>axeA1</object-name>
     <object-name>axeA2</object-name>
     <object-name>axeA3</object-name>
-
+    <object-name>cableelevator1</object-name>
+    <object-name>cableelevator2</object-name>
+    <object-name>cableelevator3</object-name>
+    <object-name>cableelevator4</object-name>
+    <object-name>cablerudderL</object-name>
+    <object-name>cablerudderR</object-name>
+    <object-name>cablerudderL2</object-name>
+    <object-name>cablerudderR2</object-name>
+    <object-name>cableaileronLH</object-name>
+    <object-name>cableaileronLB</object-name>
+    <object-name>cableaileronRH</object-name>
+    <object-name>cableaileronRB</object-name>
+    <object-name>cableroueAL</object-name>
+    <object-name>cableroueAR</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -158,31 +148,17 @@
     <object-name>pito</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Ford-Trimotor/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
-    <object-name>cableelevator1</object-name>
-    <object-name>cableelevator2</object-name>
-    <object-name>cableelevator3</object-name>
-    <object-name>cableelevator4</object-name>
-    <object-name>cablerudderL</object-name>
-    <object-name>cablerudderR</object-name>
-    <object-name>cablerudderL2</object-name>
-    <object-name>cablerudderR2</object-name>
-    <object-name>cableaileronLH</object-name>
-    <object-name>cableaileronLB</object-name>
-    <object-name>cableaileronRH</object-name>
-    <object-name>cableaileronRB</object-name>
-    <object-name>cableroueAL</object-name>
-    <object-name>cableroueAR</object-name>
-  </animation>
+  </effect>
 
   <!-- Une ombre pour OSG -->
   <model>
@@ -194,6 +170,48 @@
     </offsets>
   </model>
 
+  <!-- Interieur -->
+  <model>
+    <name>Interieur</name>
+    <path>Aircraft/Ford-Trimotor/Models/Interior/interior.xml</path>
+  </model>
+  
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+  
+  <!-- Moteur gauche -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/wright/wright0.xml</path>
+    <offsets>
+      <x-m> -4.355 </x-m>
+      <y-m> -2.950 </y-m>
+      <z-m> -0.580 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur droit -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/wright/wright1.xml</path>
+    <offsets>
+      <x-m> -4.355 </x-m>
+      <y-m>  2.950 </y-m>
+      <z-m> -0.580 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur avant -->
+  <model>
+    <path>Aircraft/Ford-Trimotor/Models/wright/wright2.xml</path>
+    <offsets>
+      <x-m> -7.155 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.530 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Cranking -->
   <!-- Left -->
   <model>
@@ -202,7 +220,7 @@
       <x-m> -3.447 </x-m>
       <y-m> -3.136 </y-m>
       <z-m> -0.983 </z-m>
-      <pitch-deg>  45 </pitch-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -212,7 +230,7 @@
       <x-m> -3.447 </x-m>
       <y-m> -2.765 </y-m>
       <z-m> -0.983 </z-m>
-      <pitch-deg>  45 </pitch-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -223,7 +241,7 @@
       <x-m> -5.917 </x-m>
       <y-m> -0.020 </y-m>
       <z-m> -1.217 </z-m>
-      <pitch-deg>  45 </pitch-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -233,7 +251,7 @@
       <x-m> -5.917 </x-m>
       <y-m>  0.020 </y-m>
       <z-m> -1.217 </z-m>
-      <pitch-deg>  45 </pitch-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -244,7 +262,7 @@
       <x-m> -3.447 </x-m>
       <y-m>  2.765 </y-m>
       <z-m> -0.983 </z-m>
-      <pitch-deg>  45 </pitch-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -254,7 +272,7 @@
       <x-m> -3.447 </x-m>
       <y-m>  3.136 </y-m>
       <z-m> -0.983 </z-m>
-      <pitch-deg>  45 </pitch-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -286,41 +304,6 @@
       <x-m>  7.112 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.206 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/Ford-Trimotor/Models/Interior/interior.xml</path>
-  </model>
-
-  <!-- Moteur gauche -->
-  <model>
-    <path>Aircraft/Ford-Trimotor/Models/wright/wright0.xml</path>
-    <offsets>
-      <x-m> -4.355 </x-m>
-      <y-m> -2.950 </y-m>
-      <z-m> -0.580 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur droit -->
-  <model>
-    <path>Aircraft/Ford-Trimotor/Models/wright/wright1.xml</path>
-    <offsets>
-      <x-m> -4.355 </x-m>
-      <y-m>  2.950 </y-m>
-      <z-m> -0.580 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur avant -->
-  <model>
-    <path>Aircraft/Ford-Trimotor/Models/wright/wright2.xml</path>
-    <offsets>
-      <x-m> -7.155 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.530 </z-m>
     </offsets>
   </model>
 
@@ -911,6 +894,15 @@
   </model>
 
   <model>
+    <path>Aircraft/Ford-Trimotor/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  -2.940 </x-m>
+      <y-m> -11.831 </y-m>
+      <z-m>   0.823 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Ford-Trimotor/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> -2.950 </x-m>
@@ -920,16 +912,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ford-Trimotor/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  -2.940 </x-m>
-      <y-m> -11.831 </y-m>
-      <z-m>   0.823 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Ford-Trimotor/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Ford-Trimotor/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -2.940 </x-m>
       <y-m> 11.831 </y-m>
@@ -939,38 +922,23 @@
 
   <!-- Wing light cone right -->
   <model>
-    <name>Taxi-LightL</name>
     <path>Aircraft/Ford-Trimotor/Models/light/light-cone.xml</path>
     <offsets>
-      <x-m>          -4.317 </x-m>
-      <y-m>          -5.791 </y-m>
-      <z-m>           0.578 </z-m>
-      <pitch-deg>    -9.500 </pitch-deg>
+      <x-m>       -4.317 </x-m>
+      <y-m>       -5.791 </y-m>
+      <z-m>        0.578 </z-m>
+      <pitch-deg> -9.500 </pitch-deg>
     </offsets>
   </model>
 
   <model>
-    <name>Taxi-LightR</name>
     <path>Aircraft/Ford-Trimotor/Models/light/light-cone.xml</path>
     <offsets>
-      <x-m>          -4.317 </x-m>
-      <y-m>           5.791 </y-m>
-      <z-m>           0.578 </z-m>
-      <pitch-deg>    -9.500 </pitch-deg>
+      <x-m>       -4.317 </x-m>
+      <y-m>        5.791 </y-m>
+      <z-m>        0.578 </z-m>
+      <pitch-deg> -9.500 </pitch-deg>
     </offsets>
   </model>
 
-  <animation>
-    <type>select</type>
-    <object-name>Taxi-LightL</object-name>
-    <object-name>Taxi-LightR</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/landing-light</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
-
 </PropertyList>
-

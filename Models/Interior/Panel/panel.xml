@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -26,12 +26,9 @@
   <model>
     <path>Aircraft/Ford-Trimotor/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
     <offsets>
-      <x-m>  0.003 </x-m>
+      <x-m>  0.004 </x-m>
       <y-m> -0.450 </y-m>
       <z-m>  0.010 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -42,9 +39,6 @@
       <x-m> 0.002 </x-m>
       <y-m> 0.074 </y-m>
       <z-m> 0.085 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -52,12 +46,9 @@
   <model>
     <path>Aircraft/Ford-Trimotor/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m>  0.013 </x-m>
+      <x-m>  0.010 </x-m>
       <y-m> -0.198 </y-m>
       <z-m>  0.016 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -65,12 +56,9 @@
   <model>
     <path>Aircraft/Ford-Trimotor/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.004 </x-m>
+      <x-m>  0.002 </x-m>
       <y-m> -0.304 </y-m>
       <z-m>  0.016 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -81,9 +69,6 @@
       <x-m>  0.003 </x-m>
       <y-m> -0.102 </y-m>
       <z-m> -0.062 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -94,9 +79,6 @@
       <x-m>  0.003 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.062 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -107,9 +89,6 @@
       <x-m>  0.003 </x-m>
       <y-m>  0.102 </y-m>
       <z-m> -0.062 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -120,9 +99,6 @@
       <x-m>  0.005 </x-m>
       <y-m> -0.304 </y-m>
       <z-m>  0.120 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -133,9 +109,6 @@
       <x-m> 0.005 </x-m>
       <y-m> 0.198 </y-m>
       <z-m> 0.120 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -146,9 +119,6 @@
       <x-m>  0.011 </x-m>
       <y-m> -0.198 </y-m>
       <z-m>  0.120 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -156,12 +126,9 @@
   <model>
     <path>Aircraft/Ford-Trimotor/Models/Interior/Panel/Instruments/hdg/hdg.xml</path>
     <offsets>
-      <x-m>  0.007 </x-m>
+      <x-m>  0.005 </x-m>
       <y-m> -0.073 </y-m>
       <z-m>  0.100 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -288,4 +255,3 @@
   </animation>
 
 </PropertyList>
-

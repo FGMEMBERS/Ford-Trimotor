@@ -29,10 +29,16 @@ Some useful keys:
 Thanks
 ======
 
+Paul Wade for fuel management
+
 ===============
 BARANGER Emmanuel
-June, 19, 2010.
+June, 19, 2010
+September, 10, 2014
 
+http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
+embaranger@free.fr
 
 [Français]
 ----------
@@ -60,7 +66,13 @@ Equipage                      :
 Remerciements
 =============
 
+Paul WADE pour la gestion du carburant
+
 ===============
 BARANGER Emmanuel
-19 Juin 2010.
+19 Juin 2010
+10 Septembre 2014
 
+http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
+embaranger@free.fr

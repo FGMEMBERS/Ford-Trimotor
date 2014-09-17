@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="trimotor-jsbsim-cnf.xml"> -->
-<PropertyList include="trimotor-yasim-cnf.xml">
+<PropertyList include="trimotor-base.xml">
 
   <sim>
 
-    <description>Ford 4.AT Trimotor</description>
+    <description>Ford 4.AT Trimotor (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
-
+    <status>Beta 0.1</status>
+    <aircraft-version>0.1</aircraft-version>
+    <flight-model>yasim</flight-model>
+    <aero>trimotor-yasim</aero>
+    
     <rating>
       <FDM type="int">     2 </FDM>
       <systems type="int"> 2 </systems>
@@ -18,4 +21,3 @@
   </sim>
 
 </PropertyList>
-
